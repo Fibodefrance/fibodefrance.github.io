@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page introuvable — Chouette Games</title>
+<meta name="description" content="Chouette Games, petit studio indépendant français : des jeux tout doux pour iPhone et iPad.">
+<link rel="canonical" href="https://fibodefrance.github.io/404.html">
+<link rel="alternate" hreflang="fr" href="https://fibodefrance.github.io/404.html">
+<link rel="alternate" hreflang="en" href="https://fibodefrance.github.io/index-en.html">
+<link rel="icon" type="image/png" href="https://fibodefrance.github.io/studio/images/favicon.png">
+<link rel="apple-touch-icon" href="https://fibodefrance.github.io/studio/images/favicon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Page introuvable — Chouette Games">
+<meta property="og:description" content="Chouette Games, petit studio indépendant français : des jeux tout doux pour iPhone et iPad.">
+<meta property="og:image" content="https://fibodefrance.github.io/studio/images/partage.png">
+<meta property="og:url" content="https://fibodefrance.github.io/404.html">
+<meta name="theme-color" content="#14100e">
+<style>
+@font-face{font-family:'Inter';src:url(https://fibodefrance.github.io/studio/polices/Inter-300.woff2) format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'Inter';src:url(https://fibodefrance.github.io/studio/polices/Inter-400.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Inter';src:url(https://fibodefrance.github.io/studio/polices/Inter-600.woff2) format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'Fraunces';src:url(https://fibodefrance.github.io/studio/polices/Fraunces-600.woff2) format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'Press Start 2P';src:url(https://fibodefrance.github.io/studio/polices/PressStart2P.woff2) format('woff2');font-weight:400;font-display:swap}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;color:var(--text);background:var(--bg);font:16px/1.6 'Inter',system-ui,-apple-system,sans-serif}
+a{color:var(--accent2)}
+img{max-width:100%;display:block}
+.cadre{max-width:1080px;margin:0 auto;padding:0 20px}
+header.haut{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.haut .cadre{display:flex;align-items:center;gap:14px;min-height:64px}
+.marque{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:600;letter-spacing:.02em}
+.marque img{width:34px;height:auto}
+.marque span{font-family:var(--titre);font-weight:var(--titre-poids);font-size:17px}
+nav.menu{margin-left:auto;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+nav.menu a{color:var(--muted);text-decoration:none;font-size:15px}
+nav.menu a:hover{color:var(--text)}
+nav.menu a.langue{border:1px solid var(--line);border-radius:999px;padding:2px 10px;font-size:13px}
+.hero{text-align:center;padding:64px 0 40px}
+.hero .chouette{width:min(150px,36vw);margin:0 auto 22px}
+.hero .nom{width:min(300px,64vw);margin:0 auto 6px}
+.hero p.games{color:var(--accent);font-weight:300;letter-spacing:.9em;margin:0 auto 30px;padding-left:.9em;font-size:clamp(16px,2.4vw,22px)}
+.hero h1{font-family:var(--titre);font-weight:var(--titre-poids);font-size:clamp(26px,4.4vw,40px);line-height:1.2;margin:0 auto 14px;max-width:760px;letter-spacing:-.01em}
+.hero p{color:var(--muted);font-size:clamp(16px,2.2vw,19px);max-width:640px;margin:0 auto}
+section{padding:36px 0}
+h2{font-family:var(--titre);font-weight:var(--titre-poids);font-size:clamp(22px,3vw,28px);margin:0 0 6px;letter-spacing:-.01em}
+.sous{color:var(--muted);margin:0 0 24px}
+.jeux{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.carte{display:flex;flex-direction:column;gap:14px;background:var(--surface);border-radius:var(--rayon);padding:20px;box-shadow:var(--ombre);transition:border-color .2s}
+.carte .tete{display:flex;gap:14px;align-items:center}
+.carte .icone{width:76px;height:76px;border-radius:18px;flex:none}
+.carte h3{font-family:var(--titre);font-weight:var(--titre-poids);font-size:19px;margin:0;line-height:1.25}
+.carte .genre{color:var(--muted);font-size:14px;margin:2px 0 0}
+.carte p.texte{margin:0;color:var(--text);opacity:.92;font-size:15px}
+.carte .actions{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.bouton{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--on-accent);text-decoration:none;font-weight:600;font-size:14px;padding:9px 16px;border-radius:999px}
+.bouton:hover{filter:brightness(1.08)}
+.bouton svg{width:16px;height:16px;fill:currentColor}
+.lien-doux{color:var(--muted);font-size:14px}
+.etiquette{display:inline-block;font-size:13px;font-weight:600;color:var(--accent2);border:1px solid var(--line);border-radius:999px;padding:6px 14px}
+.studio{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:start}
+.studio p{margin:0 0 12px}
+.boite{background:var(--surface);border:1px solid var(--line);border-radius:var(--rayon);padding:22px}
+.boite .mail{font-size:18px;font-weight:600;word-break:break-all}
+footer{border-top:1px solid var(--line);margin-top:30px;padding:26px 0 40px;color:var(--muted);font-size:14px}
+footer .cadre{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+footer a{color:var(--muted)}
+footer .droite{margin-left:auto}
+.texte-legal{max-width:760px}
+.texte-legal h1{font-family:var(--titre);font-weight:var(--titre-poids);font-size:clamp(26px,4vw,34px);margin:40px 0 6px}
+.texte-legal h2{font-size:20px;margin:30px 0 8px}
+.texte-legal .maj{color:var(--muted);margin:0 0 20px}
+.texte-legal ul{padding-left:20px}
+@media (max-width:760px){
+ .studio{grid-template-columns:1fr}
+ nav.menu{gap:12px}
+ nav.menu a:not(.langue){display:none}
+ .hero{padding:44px 0 24px}
+ footer .droite{margin-left:0}
+}
+
+:root{--bg:#14100e;--bg2:#1b1512;--surface:#211a16;--line:#3a2e25;--text:#f3eadf;--muted:#b9aa9b;
+--accent:#ee7c00;--accent2:#ffa040;--on-accent:#14100e;--titre:'Inter',system-ui,sans-serif;--titre-poids:600;
+--rayon:18px;--ombre:0 1px 0 rgba(255,255,255,.04) inset,0 12px 30px rgba(0,0,0,.35)}
+body{background:radial-gradient(1200px 600px at 50% -200px,#2a1d12 0%,transparent 70%),var(--bg)}
+.carte{border:1px solid var(--line)}
+.carte:hover{border-color:#5a4433}
+</style>
+</head>
+<body>
+<header class="haut"><div class="cadre">
+<a class="marque" href="https://fibodefrance.github.io/index.html"><img src="https://fibodefrance.github.io/studio/images/logo_tete.png" alt="" width="34" height="33"><span>Chouette Games</span></a>
+<nav class="menu" aria-label="Menu">
+<a href="https://fibodefrance.github.io/index.html#jeux">Nos jeux</a><a href="https://fibodefrance.github.io/index.html#studio">Le studio</a><a href="https://fibodefrance.github.io/index.html#contact">Contact</a>
+<a class="langue" href="https://fibodefrance.github.io/index-en.html" hreflang="en" lang="en">English</a>
+</nav>
+</div></header>
+<main><div class="cadre"><article class="texte-legal"><h1>Page introuvable</h1>
+<p>Cette page n'existe pas, ou plus. <a href="https://fibodefrance.github.io/index.html">Retour à l'accueil de Chouette Games</a>.</p>
+<p lang="en">This page does not exist. <a href="https://fibodefrance.github.io/index-en.html">Back to the Chouette Games home page</a>.</p></article></div></main>
+<footer><div class="cadre">
+<span>© 2026 Chouette Games. Tous droits réservés.</span>
+<a href="https://fibodefrance.github.io/mentions-legales.html">Mentions légales</a>
+<a href="https://fibodefrance.github.io/confidentialite.html">Confidentialité</a>
+<a class="droite" href="mailto:legionduparadis@gmail.com">legionduparadis@gmail.com</a>
+</div></footer>
+</body>
+</html>
