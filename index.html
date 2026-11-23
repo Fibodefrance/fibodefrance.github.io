@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chouette Games — studio de jeux mobiles</title>
+<meta name="description" content="Chouette Games, petit studio indépendant français : des jeux tout doux pour iPhone et iPad.">
+<link rel="canonical" href="https://fibodefrance.github.io/">
+<link rel="alternate" hreflang="fr" href="https://fibodefrance.github.io/">
+<link rel="alternate" hreflang="en" href="https://fibodefrance.github.io/index-en.html">
+<link rel="icon" type="image/png" href="studio/images/favicon.png">
+<link rel="apple-touch-icon" href="studio/images/favicon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chouette Games — studio de jeux mobiles">
+<meta property="og:description" content="Chouette Games, petit studio indépendant français : des jeux tout doux pour iPhone et iPad.">
+<meta property="og:image" content="https://fibodefrance.github.io/studio/images/partage.png">
+<meta property="og:url" content="https://fibodefrance.github.io/">
+<meta name="theme-color" content="#14100e">
+<style>
+@font-face{font-family:'Inter';src:url(studio/polices/Inter-300.woff2) format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'Inter';src:url(studio/polices/Inter-400.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Inter';src:url(studio/polices/Inter-600.woff2) format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'Fraunces';src:url(studio/polices/Fraunces-600.woff2) format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'Press Start 2P';src:url(studio/polices/PressStart2P.woff2) format('woff2');font-weight:400;font-display:swap}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;color:var(--text);background:var(--bg);font:16px/1.6 'Inter',system-ui,-apple-system,sans-serif}
+a{color:var(--accent2)}
+img{max-width:100%;display:block}
+.cadre{max-width:1080px;margin:0 auto;padding:0 20px}
+header.haut{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.haut .cadre{display:flex;align-items:center;gap:14px;min-height:64px}
+.marque{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:600;letter-spacing:.02em}
+.marque img{width:34px;height:auto}
+.marque span{font-family:var(--titre);font-weight:var(--titre-poids);font-size:17px}
+nav.menu{margin-left:auto;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+nav.menu a{color:var(--muted);text-decoration:none;font-size:15px}
+nav.menu a:hover{color:var(--text)}
+nav.menu a.langue{border:1px solid var(--line);border-radius:999px;padding:2px 10px;font-size:13px}
+.hero{text-align:center;padding:64px 0 40px}
+.hero .chouette{width:min(150px,36vw);margin:0 auto 22px}
+.hero .nom{width:min(300px,64vw);margin:0 auto 6px}
+.hero p.games{color:var(--accent);font-weight:300;letter-spacing:.9em;margin:0 auto 30px;padding-left:.9em;font-size:clamp(16px,2.4vw,22px)}
+.hero h1{font-family:var(--titre);font-weight:var(--titre-poids);font-size:clamp(26px,4.4vw,40px);line-height:1.2;margin:0 auto 14px;max-width:760px;letter-spacing:-.01em}
+.hero p{color:var(--muted);font-size:clamp(16px,2.2vw,19px);max-width:640px;margin:0 auto}
+section{padding:36px 0}
+h2{font-family:var(--titre);font-weight:var(--titre-poids);font-size:clamp(22px,3vw,28px);margin:0 0 6px;letter-spacing:-.01em}
+.sous{color:var(--muted);margin:0 0 24px}
+.jeux{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.carte{display:flex;flex-direction:column;gap:14px;background:var(--surface);border-radius:var(--rayon);padding:20px;box-shadow:var(--ombre);transition:border-color .2s}
+.carte .tete{display:flex;gap:14px;align-items:center}
+.carte .icone{width:76px;height:76px;border-radius:18px;flex:none}
+.carte h3{font-family:var(--titre);font-weight:var(--titre-poids);font-size:19px;margin:0;line-height:1.25}
+.carte .genre{color:var(--muted);font-size:14px;margin:2px 0 0}
+.carte p.texte{margin:0;color:var(--text);opacity:.92;font-size:15px}
+.carte .actions{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.bouton{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--on-accent);text-decoration:none;font-weight:600;font-size:14px;padding:9px 16px;border-radius:999px}
+.bouton:hover{filter:brightness(1.08)}
+.bouton svg{width:16px;height:16px;fill:currentColor}
+.lien-doux{color:var(--muted);font-size:14px}
+.etiquette{display:inline-block;font-size:13px;font-weight:600;color:var(--accent2);border:1px solid var(--line);border-radius:999px;padding:6px 14px}
+.studio{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:start}
+.studio p{margin:0 0 12px}
+.boite{background:var(--surface);border:1px solid var(--line);border-radius:var(--rayon);padding:22px}
+.boite .mail{font-size:18px;font-weight:600;word-break:break-all}
+footer{border-top:1px solid var(--line);margin-top:30px;padding:26px 0 40px;color:var(--muted);font-size:14px}
+footer .cadre{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+footer a{color:var(--muted)}
+footer .droite{margin-left:auto}
+.texte-legal{max-width:760px}
+.texte-legal h1{font-family:var(--titre);font-weight:var(--titre-poids);font-size:clamp(26px,4vw,34px);margin:40px 0 6px}
+.texte-legal h2{font-size:20px;margin:30px 0 8px}
+.texte-legal .maj{color:var(--muted);margin:0 0 20px}
+.texte-legal ul{padding-left:20px}
+@media (max-width:760px){
+ .studio{grid-template-columns:1fr}
+ nav.menu{gap:12px}
+ nav.menu a:not(.langue){display:none}
+ .hero{padding:44px 0 24px}
+ footer .droite{margin-left:0}
+}
+
+:root{--bg:#14100e;--bg2:#1b1512;--surface:#211a16;--line:#3a2e25;--text:#f3eadf;--muted:#b9aa9b;
+--accent:#ee7c00;--accent2:#ffa040;--on-accent:#14100e;--titre:'Inter',system-ui,sans-serif;--titre-poids:600;
+--rayon:18px;--ombre:0 1px 0 rgba(255,255,255,.04) inset,0 12px 30px rgba(0,0,0,.35)}
+body{background:radial-gradient(1200px 600px at 50% -200px,#2a1d12 0%,transparent 70%),var(--bg)}
+.carte{border:1px solid var(--line)}
+.carte:hover{border-color:#5a4433}
+</style>
+</head>
+<body>
+<header class="haut"><div class="cadre">
+<a class="marque" href="index.html"><img src="studio/images/logo_tete.png" alt="" width="34" height="33"><span>Chouette Games</span></a>
+<nav class="menu" aria-label="Menu">
+<a href="index.html#jeux">Nos jeux</a><a href="index.html#studio">Le studio</a><a href="index.html#contact">Contact</a>
+<a class="langue" href="index-en.html" hreflang="en" lang="en">English</a>
+</nav>
+</div></header>
+<main>
+<div class="cadre">
+<section class="hero">
+<img class="chouette" src="studio/images/logo_tete.png" alt="" width="150" height="146">
+<img class="nom" src="studio/images/logo_nom.png" alt="Chouette" width="360" height="128">
+<p class="games" aria-label="Games">GAMES</p>
+<h1>Des jeux tout doux pour iPhone et iPad</h1>
+<p>Chouette Games est un petit studio indépendant français. Des jeux qu'on ouvre quelques minutes par jour, pour souffler.</p>
+</section>
+<section id="jeux">
+<h2>Nos jeux</h2>
+<p class="sous">Gratuits à télécharger sur l'App Store.</p>
+<div class="jeux">
+<article class="carte">
+<div class="tete"><img class="icone" src="studio/images/legion.png" alt="La Légion du Paradis" width="76" height="76" loading="lazy">
+<div class="corps"><h3>La Légion du Paradis</h3><p class="genre">Gestion et progression</p></div></div>
+<p class="texte">Vous commandez une légion d&#x27;anges. Ils descendent les neuf cercles de l&#x27;Enfer et rapportent de quoi bâtir une cité céleste de marbre blanc et d&#x27;or.</p>
+<div class="actions"><a class="bouton" href="https://apps.apple.com/fr/app/id6815461133"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.36 1.93-3.5 2.02-3.55-1.1-1.61-2.81-1.83-3.42-1.85-1.45-.15-2.84.86-3.58.86-.75 0-1.88-.84-3.09-.82-1.59.02-3.06.93-3.88 2.35-1.66 2.87-.42 7.12 1.19 9.45.79 1.14 1.73 2.42 2.96 2.37 1.19-.05 1.64-.77 3.07-.77 1.43 0 1.84.77 3.09.74 1.28-.02 2.09-1.16 2.87-2.31.91-1.32 1.28-2.61 1.3-2.68-.03-.01-2.5-.96-2.53-3.79zM14.02 5.66c.65-.79 1.09-1.89.97-2.99-.94.04-2.08.63-2.75 1.41-.6.7-1.13 1.82-.99 2.89 1.05.08 2.12-.53 2.77-1.31z"/></svg>Voir sur l'App Store</a><a class="lien-doux" href="https://fibodefrance.github.io/legion-du-paradis/">Aide et confidentialité</a></div>
+</article>
+<article class="carte">
+<div class="tete"><img class="icone" src="studio/images/hotel.png" alt="Hôtel Minuit" width="76" height="76" loading="lazy">
+<div class="corps"><h3>Hôtel Minuit</h3><p class="genre">Objets cachés et enquête</p></div></div>
+<p class="texte">1926, dans un grand palace. Le collier de perles de la comtesse a disparu de la suite 12 : fouillez les salons, trouvez les indices et dites qui est coupable.</p>
+<div class="actions"><a class="bouton" href="https://apps.apple.com/fr/app/id6832683089"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.36 1.93-3.5 2.02-3.55-1.1-1.61-2.81-1.83-3.42-1.85-1.45-.15-2.84.86-3.58.86-.75 0-1.88-.84-3.09-.82-1.59.02-3.06.93-3.88 2.35-1.66 2.87-.42 7.12 1.19 9.45.79 1.14 1.73 2.42 2.96 2.37 1.19-.05 1.64-.77 3.07-.77 1.43 0 1.84.77 3.09.74 1.28-.02 2.09-1.16 2.87-2.31.91-1.32 1.28-2.61 1.3-2.68-.03-.01-2.5-.96-2.53-3.79zM14.02 5.66c.65-.79 1.09-1.89.97-2.99-.94.04-2.08.63-2.75 1.41-.6.7-1.13 1.82-.99 2.89 1.05.08 2.12-.53 2.77-1.31z"/></svg>Voir sur l'App Store</a><a class="lien-doux" href="https://fibodefrance.github.io/hotel-minuit/">Aide et confidentialité</a></div>
+</article>
+<article class="carte">
+<div class="tete"><img class="icone" src="studio/images/train.png" alt="Le Train de nuit" width="76" height="76" loading="lazy">
+<div class="corps"><h3>Le Train de nuit</h3><p class="genre">Solitaire</p></div></div>
+<p class="texte">Un vieux train de nuit repart de Paris pour Istanbul. Gagnez les donnes de solitaire pour avancer de gare en gare et découvrez qui a réservé le compartiment 7.</p>
+<div class="actions"><a class="bouton" href="https://apps.apple.com/fr/app/id6832536318"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.36 1.93-3.5 2.02-3.55-1.1-1.61-2.81-1.83-3.42-1.85-1.45-.15-2.84.86-3.58.86-.75 0-1.88-.84-3.09-.82-1.59.02-3.06.93-3.88 2.35-1.66 2.87-.42 7.12 1.19 9.45.79 1.14 1.73 2.42 2.96 2.37 1.19-.05 1.64-.77 3.07-.77 1.43 0 1.84.77 3.09.74 1.28-.02 2.09-1.16 2.87-2.31.91-1.32 1.28-2.61 1.3-2.68-.03-.01-2.5-.96-2.53-3.79zM14.02 5.66c.65-.79 1.09-1.89.97-2.99-.94.04-2.08.63-2.75 1.41-.6.7-1.13 1.82-.99 2.89 1.05.08 2.12-.53 2.77-1.31z"/></svg>Voir sur l'App Store</a><a class="lien-doux" href="https://fibodefrance.github.io/train-de-nuit/">Aide et confidentialité</a></div>
+</article>
+<article class="carte">
+<div class="tete"><img class="icone" src="studio/images/lac.png" alt="Le Lac des Brumes" width="76" height="76" loading="lazy">
+<div class="corps"><h3>Le Lac des Brumes</h3><p class="genre">Pêche tranquille</p></div></div>
+<p class="texte">Votre grand-père vous a confié son vieux carnet de pêche. Le lac, la rivière, puis la mer : soixante poissons, chacun à son heure, à l&#x27;heure qu&#x27;il est vraiment.</p>
+<div class="actions"><a class="bouton" href="https://apps.apple.com/fr/app/id6832680564"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.36 1.93-3.5 2.02-3.55-1.1-1.61-2.81-1.83-3.42-1.85-1.45-.15-2.84.86-3.58.86-.75 0-1.88-.84-3.09-.82-1.59.02-3.06.93-3.88 2.35-1.66 2.87-.42 7.12 1.19 9.45.79 1.14 1.73 2.42 2.96 2.37 1.19-.05 1.64-.77 3.07-.77 1.43 0 1.84.77 3.09.74 1.28-.02 2.09-1.16 2.87-2.31.91-1.32 1.28-2.61 1.3-2.68-.03-.01-2.5-.96-2.53-3.79zM14.02 5.66c.65-.79 1.09-1.89.97-2.99-.94.04-2.08.63-2.75 1.41-.6.7-1.13 1.82-.99 2.89 1.05.08 2.12-.53 2.77-1.31z"/></svg>Voir sur l'App Store</a><a class="lien-doux" href="https://fibodefrance.github.io/carnet-de-peche/">Aide et confidentialité</a></div>
+</article>
+<article class="carte">
+<div class="tete"><img class="icone" src="studio/images/jardin.png" alt="Jardin de thé" width="76" height="76" loading="lazy">
+<div class="corps"><h3>Jardin de thé</h3><p class="genre">Mahjong</p></div></div>
+<p class="texte">Madame Lin vous confie un coin de jardin à faire fleurir, une grille de mahjong à la fois. Videz la grille, et le jardin pousse.</p>
+<div class="actions"><span class="etiquette">Bientôt sur l'App Store</span></div>
+</article>
+<article class="carte">
+<div class="tete"><img class="icone" src="studio/images/cote.png" alt="La Côte des phares" width="76" height="76" loading="lazy">
+<div class="corps"><h3>La Côte des phares</h3><p class="genre">Phares à rallumer</p></div></div>
+<p class="texte">Le dernier gardien est parti il y a vingt ans. Rallumez les phares de quatre côtes, un par un, pour que les bateaux rentrent enfin au port.</p>
+<div class="actions"><span class="etiquette">Bientôt sur l'App Store</span></div>
+</article>
+<article class="carte">
+<div class="tete"><img class="icone" src="studio/images/petitparis.png" alt="Petit Paris" width="76" height="76" loading="lazy">
+<div class="corps"><h3>Petit Paris</h3><p class="genre">Fusion et cuisine</p></div></div>
+<p class="texte">Lucien a fermé son bistrot il y a des années. Aidez-le à le rouvrir : fusionnez les ingrédients, cuisinez pour les habitués et rénovez la salle.</p>
+<div class="actions"><span class="etiquette">Bientôt sur l'App Store</span></div>
+</article>
+</div>
+</section>
+<section id="studio" class="studio">
+<div><h2>Le studio</h2><p>Chouette Games est né en 2026, en France. Derrière la chouette, il y a David Scalisi. Chaque jeu se prend en main en une minute et se soigne dans le détail : de belles images, une histoire, et pas de pression.</p><p>On aime les jeux qu&#x27;on peut prendre et poser quand on veut : un solitaire dans un train de nuit, une partie de pêche au lever du jour, une enquête dans un palace des années folles.</p></div>
+<div id="contact" class="boite"><h2>Contact</h2><p>Une question, un souci dans un jeu, une idée ? Écrivez-nous, on répond à chaque message.</p>
+<p class="mail"><a href="mailto:legionduparadis@gmail.com">legionduparadis@gmail.com</a></p></div>
+</section>
+</div>
+</main>
+<footer><div class="cadre">
+<span>© 2026 Chouette Games. Tous droits réservés.</span>
+<a href="mentions-legales.html">Mentions légales</a>
+<a href="confidentialite.html">Confidentialité</a>
+<a class="droite" href="mailto:legionduparadis@gmail.com">legionduparadis@gmail.com</a>
+</div></footer>
+</body>
+</html>
